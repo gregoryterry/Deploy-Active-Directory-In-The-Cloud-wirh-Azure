@@ -173,6 +173,141 @@ Enter a username > connect
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
+<p>
+Right-click the start menu > Select Run > type CMD  	to open a command prompt
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Ping the private address of DC01	ping 10.0.0.4
+**if you get a reply, that means that the client VM can communicate with DC-1
+** if you get a “request timed out”, you will have to enable ICMP in the  DC-1 firewall
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Use Remote Desktop to log on to DC-1 with the public IP address
 
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Enter your password for DC01
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>I am logged into DC01 and we can see Server Manager console is open
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Go to the start menu > right-click > run > wf.msc
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Select Inbound rules > sort by protocol > look for ICMP > select these four
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Right-click each one and select enable rule
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>ICMP is now enabled on DC01
+Go back to the client computer  and try to ping the private address 10.0.0.4 for DC01
+	Ping 10.0.0.4		
+It works because I changed the inbound rule on the DC-1 firewall to accept ICMP traffic
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+
+<h4>Install Active Directory Domain Services</h4>
+
+<p>Log on to DC01
+
+In Server Manager > Manage > Add Roles and Features
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Role based or Feature-based installation
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Destination Server:  Select Server from server pool 	Server Name:  DC01
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Select:  Active Directory Domain Services
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Select:  Add Features
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Next
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Click next until you get to the install screen > install
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Active Directory is installing on DC01, when complete, close the wizard
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+
+<h4>Promote DC01 to a Domain Controller</h4>
+  
+<p>Click the yellow icon > select promote server to a domain controller
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Deployment Configuration;  Add new Forest    **this is a new domain controller
+Root name:	gterrylabdomain.com
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Select the following options and specify a DSRM password for restore mode
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Click next until you get to the NetBios screen
+Wait for the Netbios field to populate > click next
+<p>
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Click next until you reach the Prerequisites Check
+When complete > click install
+<p>  
+  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Wait for the installation to complete.  You will be logged out automatically
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Re-connect to the server with RDP
+Using the FQDN, re-connect to DC01 with RDP
+Gregterrylabdomain.com\gterrylab
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>Enter your password
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>You are logged into the Domain controller
+Go to the command prompt, type “whoami”  to see who you are logged in as.
+Type “ hostname” to see what computer you are logged on to.
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+<p>You can see that I am logged into a domain “gterrylabdomain” as user “gterrylab”
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+
+<h4> Create Organizational Units in the Domain Controller and Add a Domain Admin</h4>
+
+<p>On DC01 > select tools > Active Directory Users and Computers
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  
+
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
