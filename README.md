@@ -8,8 +8,6 @@ This lab will demostrate how to create and configure Azure virtual machines to i
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
-<h2></h2>
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines)
@@ -42,110 +40,113 @@ In the search bar type:  virtual machines
 
 [+] Create > Azure Virtual Machines
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haxOCx.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Use the current subscription
 Select Create new Resource Group > Name: AD-Lab-01
 Virtual Machine Name:  DC-1
 Select a Region:  (US) West US 3
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haxAeL.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Select Security type: Standard
 Select and Image:  Windows Server Datacenter
 Select Size:  select a size that fit your need
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haxk8j.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Create username and password for the Administrator account
 Make sure Inbound port (3389) RDP is checked
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/hax06o.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Check the Licensing and Confirm check boxes > click next
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haxBRC.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Use the default disk settings > next
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haxFcS.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Leave the default settings for Networking > Review + create
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haxQB8.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>When validation passes > create
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/hax3M3.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>When deployment is complete, go to resource
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haxvub.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
 
 <h4>Set the NIC for DC01 Private IP address to static</h4>
 
 <p>This is the DC-1 private IP address 10.0.0.4
 Select:  Settings > Networking
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haK4F4.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Click on DC-1 Network interface interface
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haxyfM.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>IP configurations >  Private IP address
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haxjRk.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Change to Static >  save
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haK1u2.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>DC-1 private IP 10.0.0.4 is now set to static
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haKIJG.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 
 <h4>Create the Client VM (Windows 10) named “GTWS-01”</h4?\>
 
 <p>Type Virtual machines in the search bar >  Create [+] > Azure Virtual Machine
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haKdFc.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Add the client VM  to the same Resource Group
 Give the Client VM a name:  GTWS-01
 Put the client VM  in the same region:  West US 3
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haKTTR.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Security type:  Standard
 Image: Windows 10 Pro
 Size:  Standard_E2S _V3  16 gig	**select the size that will fit your needs
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haKbfg.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Administrator account
 Username:	gregory.terry
 Password: 
 Allow the selected port for RDP (3389)
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haK97N.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Check the Licensing box  >  click next until you get to networking
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haKCJW.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>DC-1 and GTWS-01 are attached to the same subnet
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haKDLP.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Create
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haKGy1.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>DC-1 and GTWS-01 are attached to the same subnet
+<p>When validation and deployment are complete, type Virtual machines in the search bar and
+you will see DC01 and GTWS-01 virtual machines.
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haKxDL.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
 
 
 <h4>Logon to the Client VM with Remote Desktop</h4>
