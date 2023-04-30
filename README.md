@@ -32,7 +32,6 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Install Active Directory Domain Services
 - Promote DC01 to a Domain Controller
 - Create Organizational Units in the Domain Controller and Add a Domain Admin
-- Configure DNS for Active Directory
 
 
 <h4>Create the Domain Controller VM and Resource Group (Windows Server 2022) Named “DC01</h4>
@@ -309,5 +308,100 @@ Type “ hostname” to see what computer you are logged on to.
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
+<P>Expand your domain
+
+Right-click your domain > new > Organizational Unit
+<P>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Give the new OU a name:	 ADMINS
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Use the same procedure to create another OU, name it  EMPLOYEES
+
+Here are two OUs I created
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<h5>Create an Administrator Account</h5>
+
+<p>Right-click ADMINS > new > user
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Fill out the following fields:  first name	last name	full name	user logon Full name >  click next
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Create a new Admin password
+**you can enter a temporary password and check “ user must change password at next logon” > next
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Finish
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Here is the new ADMIN user
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<h5>Assign Greg Smith to the Administrators group</h5>
+
+<p>Select Greg Smith > select the Member Of tab > add
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Type Administrators > check names > ok
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Greg Smith is now a member of the Administrators group > ok
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Use the same method to create user “jane smith” inside the EMPLOYEES OU, and add her to the Domain Admins group
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Jane Smith was created inside the EMPLOYEES OU
+
+Click Jane Smith > member of tab > add
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Make Jane Smith a member of the Domain Admins group
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p?Log out and log in as Jane Smith
+<p>
+<img src="" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+
+<p>Enter the password
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>After the login > run a cmd prompt > type “whoami”  this will show the user and domain you are logged into
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<p>Type “hostname”  to see the host you are logged into
+<p>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
