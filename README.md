@@ -107,7 +107,8 @@ Select:  Settings > Networking
 
 <h4>Create the Client VM (Windows 10) named “GTWS-01”</h4?\>
 
-<p>Type Virtual machines in the search bar >  Create [+] > Azure Virtual Machine
+<p>Type Virtual machines in the search bar >
+Create [+] > Azure Virtual Machine
 <p>
 <img src="https://imgpile.com/images/haKdFc.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
@@ -119,7 +120,8 @@ Put the client VM  in the same region:  West US 3
 
 <p>Security type:  Standard
 Image: Windows 10 Pro
-Size:  Standard_E2S _V3  16 gig	**select the size that will fit your needs
+Size:  Standard_E2S _V3  16 gig
+**select the size that will fit your needs
 <p>
 <img src="https://imgpile.com/images/haKbfg.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
@@ -142,11 +144,11 @@ Allow the selected port for RDP (3389)
 <p>
 <img src="https://imgpile.com/images/haKGy1.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>When validation and deployment are complete, type Virtual machines in the search bar and
-you will see DC01 and GTWS-01 virtual machines.
+<p>When validation and deployment are complete,
+type Virtual machines in the search bar and you
+will see DC01 and GTWS-01 virtual machines.
 <p>
 <img src="https://imgpile.com/images/haKxDL.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-
 
 
 <h4>Logon to the Client VM with Remote Desktop</h4>
@@ -157,9 +159,9 @@ Click GTWS-01 VM, copy the public IP address
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>Open Remote Desktop from your personal computer or from inside the Client VM
-Paste the public IP address for GTWS-01
-Enter a username > connect
+<p>Open Remote Desktop from your personal computer
+or from inside the Client VM Paste the public IP address
+for GTWS-01 Enter a username > connect
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
@@ -178,7 +180,7 @@ Right-click the start menu > Select Run > type CMD  	to open a command prompt
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
-<p>Ping the private address of DC01	ping 10.0.0.4
+<p>Ping the private address of DC01	<b>ping 10.0.0.4</b>
 **if you get a reply, that means that the client VM can communicate with DC-1
 ** if you get a “request timed out”, you will have to enable ICMP in the  DC-1 firewall
 <p>
@@ -209,8 +211,8 @@ Right-click the start menu > Select Run > type CMD  	to open a command prompt
   <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>ICMP is now enabled on DC01
-Go back to the client computer  and try to ping the private address 10.0.0.4 for DC01
-	Ping 10.0.0.4		
+Go back to the client computer, try to ping the private address 10.0.0.4 for DC01
+	<b>Ping 10.0.0.4</b>		
 It works because I changed the inbound rule on the DC-1 firewall to accept ICMP traffic
 <p>
   <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
@@ -259,7 +261,8 @@ In Server Manager > Manage > Add Roles and Features
 <p>
   <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
-<p>Deployment Configuration;  Add new Forest    **this is a new domain controller
+<p>Deployment Configuration;  Add new Forest
+**this is a new domain controller
 Root name:	gterrylabdomain.com
 <p>
   <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
@@ -315,7 +318,7 @@ Right-click your domain > new > Organizational Unit
 <P>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>Give the new OU a name:	 ADMINS
+<p>Give the new OU a name:	 <b>ADMINS</b>
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
@@ -331,12 +334,15 @@ Here are two OUs I created
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>Fill out the following fields:  first name	last name	full name	user logon Full name >  click next
+<p>Fill out the following fields:
+first name	last name	full name
+user logon Full name >  click next
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Create a new Admin password
-**you can enter a temporary password and check “ user must change password at next logon” > next
+**you can enter a temporary password and check
+“ user must change password at next logon” > next
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
@@ -362,7 +368,8 @@ Here are two OUs I created
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>Use the same method to create user “jane smith” inside the EMPLOYEES OU, and add her to the Domain Admins group
+<p>Use the same method to create user “jane smith” inside the EMPLOYEES OU,
+and add her to the Domain Admins group
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
@@ -388,21 +395,12 @@ Click Jane Smith > member of tab > add
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>After the login > run a cmd prompt > type “whoami”  this will show the user and domain you are logged into
+<p>After the login > run a cmd prompt > type “whoami”
+this will show the user and domain you are logged into
 <p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Type “hostname”  to see the host you are logged into
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
