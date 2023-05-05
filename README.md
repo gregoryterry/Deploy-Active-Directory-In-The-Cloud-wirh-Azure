@@ -157,65 +157,66 @@ will see DC01 and GTWS-01 virtual machines.
 
 Click GTWS-01 VM, copy the public IP address
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/BeTYgJP.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Open Remote Desktop from your personal computer
 or from inside the Client VM Paste the public IP address
 for GTWS-01 Enter a username > connect
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Dx0doDd.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Enter your password for the client VM
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/bqkV4Xa.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
 
 <h4>Enable ICMP in the DC01 Firewall and Test Connectivity Between GTWS-01 and DC01</h4>
 
 <p>Here is the desktop for the client VM
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/LFuPwTa.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>
 Right-click the start menu > Select Run > type CMD  	to open a command prompt
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/mHfa7fV.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Ping the private address of DC01	<b>ping 10.0.0.4</b>
 **if you get a reply, that means that the client VM can communicate with DC-1
 ** if you get a “request timed out”, you will have to enable ICMP in the  DC-1 firewall
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ikg8sCr.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Use Remote Desktop to log on to DC-1 with the public IP address
 
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/0QRVKy5.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Enter your password for DC01
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/2BJdhNg.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>I am logged into DC01 and we can see Server Manager console is open
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/fy0GRaF.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Go to the start menu > right-click > run > wf.msc
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/bIOwwd0.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Select Inbound rules > sort by protocol > look for ICMP > select these four
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/N64777m.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Right-click each one and select enable rule
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/abO4iPL.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>ICMP is now enabled on DC01
 Go back to the client computer, try to ping the private address 10.0.0.4 for DC01
 	<b>Ping 10.0.0.4</b>		
 It works because I changed the inbound rule on the DC-1 firewall to accept ICMP traffic
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/BqiS6ug.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 
 <h4>Install Active Directory Domain Services</h4>
@@ -224,86 +225,86 @@ It works because I changed the inbound rule on the DC-1 firewall to accept ICMP 
 
 In Server Manager > Manage > Add Roles and Features
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/7PdnlfT.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Role based or Feature-based installation
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/kx08wlK.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Destination Server:  Select Server from server pool 	Server Name:  DC01
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/NY328Uq.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Select:  Active Directory Domain Services
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/pbSjQJM.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Select:  Add Features
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/0kQvlxT.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Next
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/QlfIF2M.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Click next until you get to the install screen > install
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/4vLfGB4.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Active Directory is installing on DC01, when complete, close the wizard
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/k9LYy3v.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 
 <h4>Promote DC01 to a Domain Controller</h4>
   
 <p>Click the yellow icon > select promote server to a domain controller
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/SlKGNES.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Deployment Configuration;  Add new Forest
 **this is a new domain controller
 Root name:	gterrylabdomain.com
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/8uF41cq.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Select the following options and specify a DSRM password for restore mode
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/UTJqsrl.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Click next until you get to the NetBios screen
 Wait for the Netbios field to populate > click next
 <p>
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/7UV5Yjb.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Click next until you reach the Prerequisites Check
 When complete > click install
 <p>  
-  <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/HVLZeso.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Wait for the installation to complete.  You will be logged out automatically
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/3Qq5QH1.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Re-connect to the server with RDP
 Using the FQDN, re-connect to DC01 with RDP
 Gregterrylabdomain.com\gterrylab
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/vJgm38v.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Enter your password
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/nuSXLrU.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>You are logged into the Domain controller
 Go to the command prompt, type “whoami”  to see who you are logged in as.
 Type “ hostname” to see what computer you are logged on to.
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/griTSMg.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>You can see that I am logged into a domain “gterrylabdomain” as user “gterrylab”
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Beajo4u.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 
 <h4> Create Organizational Units in the Domain Controller and Add a Domain Admin</h4>
