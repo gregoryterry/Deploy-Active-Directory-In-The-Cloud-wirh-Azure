@@ -311,63 +311,63 @@ Type “ hostname” to see what computer you are logged on to.
 
 <p>On DC01 > select tools > Active Directory Users and Computers
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/MoEiWgd.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <P>Expand your domain
 
 Right-click your domain > new > Organizational Unit
 <P>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/dDdXT2k.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Give the new OU a name:	 <b>ADMINS</b>
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/4DMkrz4.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Use the same procedure to create another OU, name it  EMPLOYEES
 
 Here are two OUs I created
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/UdcYxPn.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <h5>Create an Administrator Account</h5>
 
 <p>Right-click ADMINS > new > user
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/67rPDbg.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Fill out the following fields:
 first name	last name	full name
 user logon Full name >  click next
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/CFSSdfd.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Create a new Admin password
 **you can enter a temporary password and check
 “ user must change password at next logon” > next
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/2OzaE3z.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Finish
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/1XC0CQW.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Here is the new ADMIN user
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/WRrZ3lB.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <h5>Assign Greg Smith to the Administrators group</h5>
 
 <p>Select Greg Smith > select the Member Of tab > add
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/2Gi21MM.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Type Administrators > check names > ok
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/qsIZ5dW.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Greg Smith is now a member of the Administrators group > ok
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/QIpQy8U.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Use the same method to create user “jane smith” inside the EMPLOYEES OU,
 and add her to the Domain Admins group
