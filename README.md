@@ -34,24 +34,29 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h4>Create the Domain Controller VM and Resource Group (Windows Server 2022) Named “DC01</h4>
 
-<p>Log in to Azure at:	portal.azure.com
+</p>Log in to Azure at:	portal.azure.com
 
 In the search bar type:  virtual machines
 
 [+] Create > Azure Virtual Machines
-<p>
+</p>
 <img src="https://imgpile.com/images/haxOCx.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>Use the current subscription
+</p>Use the current subscription
+
 Select Create new Resource Group > Name: AD-Lab-01
+
 Virtual Machine Name:  DC-1
+
 Select a Region:  (US) West US 3
-<p>
+</p>
 <img src="https://imgpile.com/images/haxAeL.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Select Security type: Standard
+
 Select and Image:  Windows Server Datacenter
-Select Size:  select a size that fit your need
+
+Select Size:  select a size that fits your need
 <p>
 <img src="https://imgpile.com/images/haxk8j.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
@@ -62,7 +67,7 @@ Make sure Inbound port (3389) RDP is checked
 
 <p>Check the Licensing and Confirm check boxes > click next
 <p>
-<img src="https://imgpile.com/images/haxBRC.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haxBRC.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p>Use the default disk settings > next
 <p>
@@ -107,34 +112,45 @@ Select:  Settings > Networking
 
 <h4>Create the Client VM (Windows 10) named “GTWS-01”</h4?\>
 
-<p>Type Virtual machines in the search bar >
+</p>Type Virtual machines in the search bar >
+
 Create [+] > Azure Virtual Machine
-<p>
+</p>
 <img src="https://imgpile.com/images/haKdFc.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>Add the client VM  to the same Resource Group
+
+</p>Add the client VM  to the same Resource Group
+
 Give the Client VM a name:  GTWS-01
+
 Put the client VM  in the same region:  West US 3
-<p>
+</p>
 <img src="https://imgpile.com/images/haKTTR.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>Security type:  Standard
+
+</p>Security type:  Standard
+
 Image: Windows 10 Pro
+
 Size:  Standard_E2S _V3  16 gig
+
 **select the size that will fit your needs
-<p>
+</p>
 <img src="https://imgpile.com/images/haKbfg.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>Administrator account
+</p>Administrator account
+
 Username:	gregory.terry
+
 Password: 
+
 Allow the selected port for RDP (3389)
-<p>
+</p>
 <img src="https://imgpile.com/images/haK97N.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Check the Licensing box  >  click next until you get to networking
 <p>
-<img src="https://imgpile.com/images/haKCJW.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgpile.com/images/haKCJW.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p>DC-1 and GTWS-01 are attached to the same subnet
 <p>
@@ -144,25 +160,25 @@ Allow the selected port for RDP (3389)
 <p>
 <img src="https://imgpile.com/images/haKGy1.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>When validation and deployment are complete,
+</p>When validation and deployment are complete,
 type Virtual machines in the search bar and you
 will see DC01 and GTWS-01 virtual machines.
-<p>
+</p>
 <img src="https://imgpile.com/images/haKxDL.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 
 <h4>Logon to the Client VM with Remote Desktop</h4>
 
-<p>Log into GTWS-01 with Remote Desktop using the public IP address
+</p>Log into GTWS-01 with Remote Desktop using the public IP address
 
 Click GTWS-01 VM, copy the public IP address
-<p>
+</p>
 <img src="https://i.imgur.com/BeTYgJP.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>Open Remote Desktop from your personal computer
+</p>Open Remote Desktop from your personal computer
 or from inside the Client VM Paste the public IP address
 for GTWS-01 Enter a username > connect
-<p>
+</p>
 <img src="https://i.imgur.com/Dx0doDd.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Enter your password for the client VM
@@ -177,23 +193,27 @@ for GTWS-01 Enter a username > connect
 <img src="https://i.imgur.com/LFuPwTa.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>
-Right-click the start menu > Select Run > type CMD  	to open a command prompt
+Right-click the start menu > Select Run > type CMD
+
+to open a command prompt
 <p>
 <img src="https://i.imgur.com/mHfa7fV.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
-<p>Ping the private address of DC01	<b>ping 10.0.0.4</b>
+</p>Ping the private address of DC01	<b>ping 10.0.0.4</b>
+
 **if you get a reply, that means that the client VM can communicate with DC-1
+
 ** if you get a “request timed out”, you will have to enable ICMP in the  DC-1 firewall
-<p>
-<img src="https://i.imgur.com/ikg8sCr.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<img src="https://i.imgur.com/ikg8sCr.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 
 <p>Use Remote Desktop to log on to DC-1 with the public IP address
 
-<img src="https://i.imgur.com/0QRVKy5.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/0QRVKy5.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p>Enter your password for DC01
 <p>
-  <img src="https://i.imgur.com/2BJdhNg.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/2BJdhNg.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
   
 <p>I am logged into DC01 and we can see Server Manager console is open
 <p>
@@ -203,7 +223,9 @@ Right-click the start menu > Select Run > type CMD  	to open a command prompt
 <p>
   <img src="https://i.imgur.com/bIOwwd0.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
-<p>Select Inbound rules > sort by protocol > look for ICMP > select these four
+<p>Select Inbound rules > sort by protocol >
+
+look for ICMP > select these four
 <p>
   <img src="https://i.imgur.com/N64777m.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
@@ -211,12 +233,15 @@ Right-click the start menu > Select Run > type CMD  	to open a command prompt
 <p>
   <img src="https://i.imgur.com/abO4iPL.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
-<p>ICMP is now enabled on DC01
+</p>ICMP is now enabled on DC01
+
 Go back to the client computer, try to ping the private address 10.0.0.4 for DC01
-	<b>Ping 10.0.0.4</b>		
+
+	<b>Ping 10.0.0.4</b>
+	
 It works because I changed the inbound rule on the DC-1 firewall to accept ICMP traffic
-<p>
-  <img src="https://i.imgur.com/BqiS6ug.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+  <img src="https://i.imgur.com/BqiS6ug.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
   
 
 <h4>Install Active Directory Domain Services</h4>
@@ -231,7 +256,9 @@ In Server Manager > Manage > Add Roles and Features
 <p>
   <img src="https://i.imgur.com/kx08wlK.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
-<p>Destination Server:  Select Server from server pool 	Server Name:  DC01
+<p>Destination Server:  Select Server from server pool
+
+Server Name:  DC01
 <p>
   <img src="https://i.imgur.com/NY328Uq.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
@@ -251,7 +278,8 @@ In Server Manager > Manage > Add Roles and Features
 <p>
   <img src="https://i.imgur.com/4vLfGB4.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
-<p>Active Directory is installing on DC01, when complete, close the wizard
+<p>Active Directory is installing on DC01,
+when complete, close the wizard
 <p>
   <img src="https://i.imgur.com/k9LYy3v.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
@@ -262,10 +290,12 @@ In Server Manager > Manage > Add Roles and Features
 <p>
   <img src="https://i.imgur.com/SlKGNES.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
-<p>Deployment Configuration;  Add new Forest
+</p>Deployment Configuration;  Add new Forest
+
 **this is a new domain controller
+
 Root name:	gterrylabdomain.com
-<p>
+</p>
   <img src="https://i.imgur.com/8uF41cq.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Select the following options and specify a DSRM password for restore mode
@@ -273,6 +303,7 @@ Root name:	gterrylabdomain.com
   <img src="https://i.imgur.com/UTJqsrl.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
 <p>Click next until you get to the NetBios screen
+
 Wait for the Netbios field to populate > click next
 <p>
   <img src="https://i.imgur.com/7UV5Yjb.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
@@ -284,27 +315,33 @@ When complete > click install
   
 <p>Wait for the installation to complete.  You will be logged out automatically
 <p>
-<img src="https://i.imgur.com/3Qq5QH1.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/3Qq5QH1.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
   
 <p>Re-connect to the server with RDP
+
 Using the FQDN, re-connect to DC01 with RDP
+
 Gregterrylabdomain.com\gterrylab
 <p>
-<img src="https://i.imgur.com/vJgm38v.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/vJgm38v.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
   
 <p>Enter your password
 <p>
-<img src="https://i.imgur.com/nuSXLrU.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/nuSXLrU.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
   
-<p>You are logged into the Domain controller
-Go to the command prompt, type “whoami”  to see who you are logged in as.
+</p>You are logged into the Domain controller
+
+Go to the command prompt, type “whoami”
+
+to see who you are logged in as.
+
 Type “ hostname” to see what computer you are logged on to.
-<p>
-<img src="https://i.imgur.com/griTSMg.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<img src="https://i.imgur.com/griTSMg.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
   
 <p>You can see that I am logged into a domain “gterrylabdomain” as user “gterrylab”
 <p>
-<img src="https://i.imgur.com/Beajo4u.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Beajo4u.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
   
 
 <h4> Create Organizational Units in the Domain Controller and Add a Domain Admin</h4>
@@ -313,19 +350,17 @@ Type “ hostname” to see what computer you are logged on to.
 <p>
 <img src="https://i.imgur.com/MoEiWgd.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
   
-<P>Expand your domain
-
-Right-click your domain > new > Organizational Unit
-<P>
+</P>Expand your domain > Right-click your domain > new > Organizational Unit
+</P>
 <img src="https://i.imgur.com/dDdXT2k.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Give the new OU a name:	 <b>ADMINS</b>
 <p>
 <img src="https://i.imgur.com/4DMkrz4.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>Use the same procedure to create another OU, name it  EMPLOYEES
+<p>Use the same procedure to create a second OU, name it  EMPLOYEES
 
-Here are two OUs I created
+Here are the two OUs I created
 <p>
 <img src="https://i.imgur.com/UdcYxPn.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
@@ -335,39 +370,41 @@ Here are two OUs I created
 <p>
 <img src="https://i.imgur.com/67rPDbg.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-<p>Fill out the following fields:
-first name	last name	full name
+</p>Fill out the following fields:
+first name > last name > full name >
 user logon Full name >  click next
-<p>
-<img src="https://i.imgur.com/CFSSdfd.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<img src="https://i.imgur.com/CFSSdfd.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
-<p>Create a new Admin password
+</p>Create a new Admin password
+
 **you can enter a temporary password and check
+
 “ user must change password at next logon” > next
-<p>
-<img src="https://i.imgur.com/2OzaE3z.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<img src="https://i.imgur.com/2OzaE3z.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p>Finish
 <p>
-<img src="https://i.imgur.com/1XC0CQW.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/1XC0CQW.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p>Here is the new ADMIN user
 <p>
-<img src="https://i.imgur.com/WRrZ3lB.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/WRrZ3lB.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <h5>Assign Greg Smith to the Administrators group</h5>
 
 <p>Select Greg Smith > select the Member Of tab > add
 <p>
-<img src="https://i.imgur.com/2Gi21MM.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/2Gi21MM.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p>Type Administrators > check names > ok
 <p>
-<img src="https://i.imgur.com/qsIZ5dW.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/qsIZ5dW.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 
 <p>Greg Smith is now a member of the Administrators group > ok
 <p>
-<img src="https://i.imgur.com/QIpQy8U.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/QIpQy8U.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p>Use the same method to create user “jane smith” inside the EMPLOYEES OU,
 and add her to the Domain Admins group
