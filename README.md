@@ -408,41 +408,47 @@ user logon Full name >  click next
 <p>
 <img src="https://i.imgur.com/QIpQy8U.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
-</p>Use the same method to create user “jane smith” inside the EMPLOYEES OU,
-
+<p>Use the same method to create user “jane smith” inside the EMPLOYEES OU,
 add her to the Domain Admins group
 </p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<img src="https://i.imgur.com/971Sfyo.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
+<img src="https://i.imgur.com/GIgsoKl.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+
+<img src="https://i.imgur.com/Qu9aOtC.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+
+<img src="https://i.imgur.com/eEGucPa.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+
 
 <p>Jane Smith was created inside the EMPLOYEES OU
 
 Click Jane Smith > member of tab > add
 <p>
+<img src="https://i.imgur.com/61DfshY.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+
 <img src="" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p>Make Jane Smith a member of the Domain Admins group
 <p>
-<img src="" height="50%" width="50%" alt="Disk Sanitization Steps"/>
-<img src="" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Zzr8uKz.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/J65wCLJ.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p?Log out and log in as Jane Smith
 <p>
-<img src="" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/g1Vvt4g.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 
 <p>Enter the password
 <p>
-<img src="" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/vQNAfOy.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 
 </p>After the login > run a cmd prompt > type “whoami”
 
 this will show the user and domain you are logged into
 </p>
-<img src="" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/0MCLZr8.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
 
 <p>Type “hostname”  to see the host you are logged into
 <p>
-<img src="" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/gQmqFbM.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
 
