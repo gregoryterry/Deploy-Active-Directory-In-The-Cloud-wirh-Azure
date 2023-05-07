@@ -42,7 +42,7 @@ In the search bar type:  virtual machines
 </p>
 <img src="https://imgpile.com/images/haxOCx.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-</p>Use the current subscription
+<p>Use the current subscription
 
 Select Create new Resource Group > Name: AD-Lab-01
 
@@ -61,6 +61,7 @@ Select Size:  select a size that fits your need
 <img src="https://imgpile.com/images/haxk8j.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Create username and password for the Administrator account
+
 Make sure Inbound port (3389) RDP is checked
 <p>
 <img src="https://imgpile.com/images/hax06o.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
@@ -89,8 +90,9 @@ Make sure Inbound port (3389) RDP is checked
 <h4>Set the NIC for DC01 Private IP address to static</h4>
 
 <p>This is the DC-1 private IP address 10.0.0.4
+
 Select:  Settings > Networking
-<p>
+</p>
 <img src="https://imgpile.com/images/haK4F4.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
 <p>Click on DC-1 Network interface interface
