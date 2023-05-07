@@ -452,3 +452,5 @@ this will show the user and domain you are logged into
 <p>
 <img src="https://i.imgur.com/gQmqFbM.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
 
+<P>In the next lab, I will configure DNS for Active Directory
+</p>
