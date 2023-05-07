@@ -179,11 +179,11 @@ Click GTWS-01 VM, copy the public IP address
 or from inside the Client VM Paste the public IP address
 for GTWS-01 Enter a username > connect
 </p>
-<img src="https://i.imgur.com/Dx0doDd.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Dx0doDd.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 
 <p>Enter your password for the client VM
 <p>
-<img src="https://i.imgur.com/bqkV4Xa.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/bqkV4Xa.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 
 
 <h4>Enable ICMP in the DC01 Firewall and Test Connectivity Between GTWS-01 and DC01</h4>
@@ -197,7 +197,7 @@ Right-click the start menu > Select Run > type CMD
 
 to open a command prompt
 <p>
-<img src="https://i.imgur.com/mHfa7fV.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/mHfa7fV.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
   
 </p>Ping the private address of DC01	<b>ping 10.0.0.4</b>
 
@@ -221,7 +221,7 @@ to open a command prompt
   
 <p>Go to the start menu > right-click > run > wf.msc
 <p>
-  <img src="https://i.imgur.com/bIOwwd0.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/bIOwwd0.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
   
 <p>Select Inbound rules > sort by protocol >
 
@@ -268,7 +268,7 @@ Server Name:  DC01
   
 <p>Select:  Add Features
 <p>
-  <img src="https://i.imgur.com/0kQvlxT.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/0kQvlxT.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
   
 <p>Next
 <p>
@@ -315,7 +315,7 @@ When complete > click install
   
 <p>Wait for the installation to complete.  You will be logged out automatically
 <p>
-<img src="https://i.imgur.com/3Qq5QH1.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/3Qq5QH1.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
   
 <p>Re-connect to the server with RDP
 
@@ -323,7 +323,7 @@ Using the FQDN, re-connect to DC01 with RDP
 
 Gregterrylabdomain.com\gterrylab
 <p>
-<img src="https://i.imgur.com/vJgm38v.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/vJgm38v.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
   
 <p>Enter your password
 <p>
@@ -356,7 +356,7 @@ Type “ hostname” to see what computer you are logged on to.
 
 <p>Give the new OU a name:	 <b>ADMINS</b>
 <p>
-<img src="https://i.imgur.com/4DMkrz4.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/4DMkrz4.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p>Use the same procedure to create a second OU, name it  EMPLOYEES
 
@@ -406,9 +406,10 @@ user logon Full name >  click next
 <p>
 <img src="https://i.imgur.com/QIpQy8U.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
-<p>Use the same method to create user “jane smith” inside the EMPLOYEES OU,
-and add her to the Domain Admins group
-<p>
+</p>Use the same method to create user “jane smith” inside the EMPLOYEES OU,
+
+add her to the Domain Admins group
+</p>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 <img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
@@ -418,27 +419,28 @@ and add her to the Domain Admins group
 
 Click Jane Smith > member of tab > add
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p>Make Jane Smith a member of the Domain Admins group
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p?Log out and log in as Jane Smith
 <p>
-<img src="" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+<img src="" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 <p>Enter the password
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 
-<p>After the login > run a cmd prompt > type “whoami”
+</p>After the login > run a cmd prompt > type “whoami”
+
 this will show the user and domain you are logged into
-<p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<img src="" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 
 <p>Type “hostname”  to see the host you are logged into
 <p>
-<img src="" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 
