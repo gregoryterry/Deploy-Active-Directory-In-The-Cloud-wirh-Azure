@@ -1,5 +1,5 @@
 # Deploy and Configure Active Directory In The Cloud wirh Azure
-This lab will demostrate how to create and configure Azure virtual machines to install Windows Server and promote the server to a domain controller.
+This lab will demonstrate  how to create and configure Azure virtual machines to install Windows Server and promote the server to a domain controller.
 <p align="center">
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
